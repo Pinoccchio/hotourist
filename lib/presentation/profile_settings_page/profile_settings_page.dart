@@ -206,7 +206,7 @@ class _ProfileSettingsPageState extends State<ProfileSettingsPage> {
    height: 50.v,
    leadingWidth: 56.h,
    leading: AppbarLeadingImage(
-    imagePath: 'lib/images/logo.png',
+    imagePath: 'assets/images/final_logo.png',
     margin: EdgeInsets.only(left: 24.h, top: 9.v, bottom: 9.v),
     onTap: () {
      print("Clicked!");
@@ -269,7 +269,7 @@ class _ProfileSettingsPageState extends State<ProfileSettingsPage> {
   Navigator.push(
    context,
    MaterialPageRoute(
-    builder: (context) => NotificationsScreen(updateUnreadCount: _fetchUnreadNotificationsCount)
+       builder: (context) => NotificationsScreen(updateUnreadCount: _fetchUnreadNotificationsCount)
    ),
   );
  }

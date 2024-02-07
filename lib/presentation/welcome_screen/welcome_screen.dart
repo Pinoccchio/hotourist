@@ -42,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: Column(
                 children: [
                   CustomImageView(
-                    imagePath: 'lib/images/logo.png',
+                    imagePath: 'assets/images/final_logo.png',
                     height: 164.v,
                     width: 167.h,
                     margin: EdgeInsets.only(left: 120, top: 200, right: 120),
