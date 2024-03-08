@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hotel_app/core/app_export.dart';
 import 'package:hotel_app/presentation/booking_ongoing_tab_container_page/booking_ongoing_tab_container_page.dart';
 import 'package:hotel_app/presentation/chat_screen/chat_screen.dart';
@@ -8,7 +9,7 @@ import 'package:hotel_app/presentation/search_page_tab_container_page/search_pag
 import 'package:hotel_app/widgets/custom_bottom_bar.dart';
 
 import '../booking_ongoing_page/booking_info_model.dart';
-
+//MODIFIED
 class HomeScreenContainerScreen extends StatelessWidget {
  HomeScreenContainerScreen({Key? key}) : super(key: key);
 
@@ -62,7 +63,9 @@ class HomeScreenContainerScreen extends StatelessWidget {
       ),
      ),
      TextButton(
-      onPressed: () => Navigator.of(context).pop(true),
+      onPressed: () {
+       SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+      },
       style: ButtonStyle(
        backgroundColor: MaterialStateProperty.all(Color(0xFF1AADB6)),
       ),
